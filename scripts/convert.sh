@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [ -n "$1" ] && [ -e $1 ]; then
-	file=$1
-else
-	echo " ** Input File : $1 does not exist"
-	echo " ** Please specify the correct dependencies file"
-	echo " ** Usage : bash <path-to-script> <path-to-dependencies-file> [<path-to-local-manifest>]"
-	exit 1
-fi
+#if [ -n "$1" ] && [ -e $1 ]; then
+#	file=$1
+#else
+#	echo " ** Input File : $1 does not exist"
+#	echo " ** Please specify the correct dependencies file"
+#	echo " ** Usage : bash <path-to-script> <path-to-dependencies-file> [<path-to-local-manifest>]"
+#	exit 1
+#fi
 
 if [ -n "$2" ]; then
 	manifest_path="$2"
