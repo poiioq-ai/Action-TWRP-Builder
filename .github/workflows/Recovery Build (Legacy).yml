@@ -109,7 +109,8 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: 'poiioq-ai/android_system_core'
-        ref: android-6.0      
+        ref: android-6.0
+        
     - name: Repo Sync
       run: |
         repo sync -j$(nproc --all) --force-sync
