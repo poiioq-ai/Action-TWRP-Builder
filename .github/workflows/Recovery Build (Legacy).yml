@@ -105,7 +105,11 @@ jobs:
         git config --global user.email "azwhikaru+37921907@github.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
-          
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        repository: 'poiioq-ai/android_system_core'
+        ref: android-6.0      
     - name: Repo Sync
       run: |
         repo sync -j$(nproc --all) --force-sync
